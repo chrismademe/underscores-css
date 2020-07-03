@@ -11,8 +11,8 @@
 	margin: calc(var(--cluster-space) / 2 * -1);
 }
 
-.cluster--center > *,
-.cluster--centre > * {
+.cluster.--center > *,
+.cluster.--centre > * {
 	justify-content: center;
 }
 
