@@ -1,0 +1,77 @@
+@use 'tokens';
+@use 'mixins';
+
+// Colours
+@include mixins.util-from-map('c', 'color', map-get(tokens.$tokens, 'color'));
+@include mixins.util-from-map(
+	'bg',
+	'background-color',
+	map-get(tokens.$tokens, 'color')
+);
+
+// Text
+@include mixins.util-from-map(
+	'font',
+	'font-family',
+	map-get(tokens.$tokens, 'font')
+);
+
+@include mixins.util-from-map(
+	'text',
+	'font-size',
+	map-get(tokens.$tokens, 'size')
+);
+
+@include mixins.util-from-map(
+	'weight',
+	'font-weight',
+	map-get(tokens.$tokens, 'weight')
+);
+
+@include mixins.util-from-map(
+	'leading',
+	'line-height',
+	map-get(tokens.$tokens, 'leading')
+);
+
+@include mixins.util-from-map(
+	'tracking',
+	'letter-spacing',
+	map-get(tokens.$tokens, 'tracking')
+);
+
+@include mixins.util('uppercase', 'text-transform', 'uppercase');
+
+// Box
+@include mixins.util-from-map(
+	'radius',
+	'border-radius',
+	map-get(tokens.$tokens, 'radius')
+);
+
+@include mixins.util-from-map(
+	'shadow',
+	'box-shadow',
+	map-get(tokens.$tokens, 'shadow')
+);
+
+@include mixins.util-from-map(
+	'px',
+	'padding-inline',
+	map-get(tokens.$tokens, 'space')
+);
+
+@include mixins.util-from-map(
+	'py',
+	'padding-block',
+	map-get(tokens.$tokens, 'space')
+);
+
+@include mixins.util-from-map(
+	'mt',
+	'margin-block-start',
+	map-get(tokens.$tokens, 'space')
+);
+
+// SVG
+@include mixins.util('fill-current', 'fill', currentColor);

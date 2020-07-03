@@ -1,0 +1,16 @@
+/**
+ * Utility Map
+ *
+ * Generates utility classes using values from a map
+ */
+@mixin util-from-map($className, $selector, $map) {
+	@each $key, $value in $map {
+		.#{$className}-#{$key} {
+			// Unquote string values like font families
+			@if (type-of($value) == string) {
+				$value: unquote($value);
+			}
+			#{$selector}: $value;
+		}
+	}
+}

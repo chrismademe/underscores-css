@@ -1,0 +1,34 @@
+@use 'sass:map';
+
+.alert {
+    --bg-color: var(--color-grey-100);
+    --color: var(--color-grey-700);
+    --padding: var(--space-4) var(--space-8);
+    --radius: var(--radius-lg);
+
+    display: flex;
+    align-items: center;
+    border-radius: var(--radius);
+    background-color: var(--bg-color);
+    color: var(--color);
+    padding: var(--padding);
+}
+
+// Define Named Variants
+$variants: (
+    "positive": (
+        "color": var(--color-green-100),
+        "bg-color": var(--color-green-700),
+    ),
+    "negative": (
+        "color": var(--color-red-100),
+        "bg-color": var(--color-red-700),
+    ),
+);
+
+@each $key, $variant in $variants {
+    .alert.--#{$key} {
+        --bg-color: #{map.get($variant, "bg-color")};
+        --color: #{map.get($variant, "color")};
+    }
+}
