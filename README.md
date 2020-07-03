@@ -33,6 +33,10 @@ npm install underscores-css --save
     )
 );
 
+/* Import Components you need */
+@use 'node_modules/underscores-css/src/components/alert';
+@use 'node_modules/underscores-css/src/components/button';
+
 /* Your project CSS */
 @use 'main';
 
@@ -51,9 +55,9 @@ This library comes with some mixins to take care of some common tasks, like gene
 // Defaults to 'min-width' but any valid CSS is accepted.
 // You can also use breakpoint keywords: sm, md, lg and xl.
 @include mq(40em) {
-	.my-thing {
-		color: var(--color-pink);
-	}
+    .my-thing {
+        color: var(--color-pink);
+    }
 }
 ```
 
@@ -80,3 +84,13 @@ The functions available are mostly used internally, but you can use them in your
 -   `rem($multiple)`: Returns a REM value based on 4px grid scale, e.g. rem(1) === .25rem
 
 Same goes here with regards to documentation, I will get it written up when I can.
+
+### Sass Load Path
+
+It's going to get annoying to type "node_modules/underscores-css/src" everytime you want to use something from the library, so I'd recommend adding it to your [load path](https://sass-lang.com/documentation/at-rules/use#load-paths), so you can just reference the files directly!
+
+With the load path configured, you can do this:
+
+```scss
+@use 'lib'; // instead of node_modules/underscores-css/lib
+```
