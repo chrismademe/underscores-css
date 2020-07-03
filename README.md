@@ -16,9 +16,22 @@ npm install underscores-css --save
 
 ### Use it
 
-```css
+```scss
 /* Import The Library */
-@use "node_modules/underscores-css/src/lib";
+@use "node_modules/underscores-css/src/lib" with (
+
+    // See node_modules/underscores-css/src/_tokens.scss
+    // for all the defaults tokens. Extend them with your
+    // project tokens here
+    $projectTokens: (
+        'color': (
+            'pink': deeppink // Best color
+        ),
+        'font': (
+            'base': 'Comic Sans MS' // Best font
+        )
+    )
+);
 
 /* Your project CSS */
 @use 'main';
