@@ -1,21 +1,11 @@
 @use '../tokens';
 
 @mixin mq($size, $query: 'min-width') {
-	$breakpoints: tokens.$breakpoints;
+    @if (map-has-key(tokens.$breakpoints, $size)) {
+        $size: map-get(tokens.$breakpoints, $size);
+    }
 
-	@if $size == 'sm' {
-		$size: map-get($breakpoints, 'sm');
-	} @else if $size == 'md' {
-		$size: map-get($breakpoints, 'md');
-	} @else if $size == 'lg' {
-		$size: map-get($breakpoints, 'lg');
-	} @else if $size == 'xl' {
-		$size: map-get($breakpoints, 'xl');
-	} @else if type-of($size) == 'number' {
-		$size: $size;
-	}
-
-	@media (#{$query}: $size) {
-		@content;
-	}
+    @media (#{$query}: $size) {
+        @content;
+    }
 }
