@@ -182,7 +182,7 @@ html {
 
 /* Set core body defaults */
 body {
-	color: var(--color-grey-800);
+	color: var(--color-primary);
 	font-family: var(--font-base);
 	font-size: var(--size-base);
 	min-height: 100vh;
@@ -285,9 +285,9 @@ pre {
 }
 
 code {
-	background-color: var(--color-grey-100);
-	border-radius: var(--radius-sm);
-	color: var(--color-red-400);
+	background-color: var(--color-gray-10);
+	border-radius: var(--radius-default);
+	color: var(--color-negative-50);
 	padding: var(--space-px) var(--space-2);
 }
 
@@ -297,7 +297,7 @@ pre code {
 
 p,
 li {
-	line-height: var(--leading-base, 1.5);
+	line-height: var(--leading-default, 1.5);
 }
 
 .sr-only {

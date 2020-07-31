@@ -1,16 +1,7 @@
-@use 'sass:map';
-@use 'tokens';
-
 .flow > * {
-    --flow-space: var(--space-4, 1em);
+	--flow-space: var(--space-4, 1em);
 }
 
 .flow > * + * {
-    margin-block-start: var(--flow-space);
-}
-
-@each $key, $value in map.get(tokens.$tokens, "space") {
-    .flow.--space-#{$key} > * {
-        --flow-space: var(--space-#{$key});
-    }
+	margin-block-start: var(--flow-space);
 }

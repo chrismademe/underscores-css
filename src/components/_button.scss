@@ -3,11 +3,11 @@
 @use 'tokens';
 
 .btn {
-	--bg-color: var(--color-grey-100);
-	--color: var(--color-grey-800);
+	--bg-color: var(--color-gray-10);
+	--color: var(--color-gray-90);
 	--border: 0;
 	--font-size: var(--text-sm);
-	--radius: var(--radius-md);
+	--radius: var(--radius-default);
 	--padding: var(--space-2) var(--space-6);
 
 	background-color: var(--bg-color);

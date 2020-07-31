@@ -1,5 +1,5 @@
 .cluster {
-	--cluster-space: var(--space-2);
+	--gap: var(--space-2);
 	overflow: hidden;
 }
 
@@ -8,7 +8,7 @@
 	flex-wrap: wrap;
 	justify-content: flex-start;
 	align-items: center;
-	margin: calc(var(--cluster-space) / 2 * -1);
+	margin: calc(var(--gap) / 2 * -1);
 }
 
 .cluster.--center > *,
@@ -17,5 +17,5 @@
 }
 
 .cluster > * > * {
-	margin: calc(var(--cluster-space) / 2);
+	margin: calc(var(--gap) / 2);
 }

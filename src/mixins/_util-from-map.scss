@@ -5,7 +5,15 @@
  */
 @mixin util-from-map($className, $selector, $map) {
 	@each $key, $value in $map {
-		.#{$className}-#{$key} {
+		$utilClassName: #{$className}-#{$key};
+
+		// If a default key is present, use the
+		// classname with no suffix
+		@if ($key == 'default') {
+			$utilClassName: $className;
+		}
+
+		.#{$utilClassName} {
 			// Unquote string values like font families
 			@if (type-of($value) == string) {
 				$value: unquote($value);
