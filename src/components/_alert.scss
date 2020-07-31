@@ -17,12 +17,12 @@
 // Define Named Variants
 $variants: (
 	'positive': (
-		'color': var(--color-green-100),
-		'bg-color': var(--color-green-700)
+		'color': var(--color-positive-10),
+		'bg-color': var(--color-positive-70)
 	),
 	'negative': (
-		'color': var(--color-red-100),
-		'bg-color': var(--color-red-700)
+		'color': var(--color-negative-10),
+		'bg-color': var(--color-negative-70)
 	)
 );
 
